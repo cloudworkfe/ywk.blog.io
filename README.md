@@ -1,5 +1,11 @@
+## 安装依赖
+
+```
+npm i
+```
+
 ## 开始写作
 
 ```
-hexo new '{postname}'  // 示例：hexo new 'React高阶组件'
+hexo new "My New Post"
 ```
