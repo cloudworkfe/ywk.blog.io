@@ -3,18 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: 云族佳FE
 subtitle:
 description:
 keywords:
-author: John Doe
-language:
+author: 云族佳FE
+language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://yoursite.com
-root: /ywk.blog.io/
+root: ./
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
