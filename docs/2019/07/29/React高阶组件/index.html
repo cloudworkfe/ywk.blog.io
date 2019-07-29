@@ -5,15 +5,21 @@
   
 
   
-  <title>云族佳FE</title>
+  <title>React高阶组件 | 云族佳FE</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="云族佳FE">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="1. 高阶组件是什么？高阶组件（ higher-order component ，HOC ）是 React 中复用组件逻辑的一种进阶技巧。它本身并不是 React 的 API，而是一种 React 组件的设计理念， 可以类比高阶函数，高阶函数是把函数作为参数传入到函数中并返回一个新的函数。这里我们把函数替换为组件，就是高阶组件了 const EnhancedComponent = higherOr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React高阶组件">
+<meta property="og:url" content="http://yoursite.com/2019/07/29/React高阶组件/index.html">
 <meta property="og:site_name" content="云族佳FE">
+<meta property="og:description" content="1. 高阶组件是什么？高阶组件（ higher-order component ，HOC ）是 React 中复用组件逻辑的一种进阶技巧。它本身并不是 React 的 API，而是一种 React 组件的设计理念， 可以类比高阶函数，高阶函数是把函数作为参数传入到函数中并返回一个新的函数。这里我们把函数替换为组件，就是高阶组件了 const EnhancedComponent = higherOr">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/winfredwyw/notes/master/assets/201902/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F.jpg">
+<meta property="og:updated_time" content="2019-07-29T03:17:06.322Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="云族佳FE">
+<meta name="twitter:title" content="React高阶组件">
+<meta name="twitter:description" content="1. 高阶组件是什么？高阶组件（ higher-order component ，HOC ）是 React 中复用组件逻辑的一种进阶技巧。它本身并不是 React 的 API，而是一种 React 组件的设计理念， 可以类比高阶函数，高阶函数是把函数作为参数传入到函数中并返回一个新的函数。这里我们把函数替换为组件，就是高阶组件了 const EnhancedComponent = higherOr">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/winfredwyw/notes/master/assets/201902/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F.jpg">
   
     <link rel="alternate" href="/ywk.blog.io/atom.xml" title="云族佳FE" type="application/atom+xml">
   
@@ -60,9 +66,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-React高阶组件" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-React高阶组件" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/ywk.blog.io/2019/07/29/React高阶组件/" class="article-date">
   <time datetime="2019-07-29T03:16:55.000Z" itemprop="datePublished">2019-07-29</time>
@@ -75,8 +79,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/ywk.blog.io/2019/07/29/React高阶组件/">React高阶组件</a>
+    <h1 class="article-title" itemprop="name">
+      React高阶组件
     </h1>
   
 
@@ -129,60 +133,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/ywk.blog.io/2019/07/29/hello-world/" class="article-date">
-  <time datetime="2019-07-29T01:57:29.712Z" itemprop="datePublished">2019-07-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/ywk.blog.io/2019/07/29/hello-world/">Hello World</a>
-    </h1>
+    <a href="/ywk.blog.io/2019/07/29/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/29/hello-world/" data-id="cjyntoejt0001vct8l28p8rdn" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-
 
 </section>
         
