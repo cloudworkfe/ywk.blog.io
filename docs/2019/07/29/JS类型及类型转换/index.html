@@ -5,15 +5,19 @@
   
 
   
-  <title>云族佳FE</title>
+  <title>JS类型及类型转换 | 云族佳FE</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="云族佳FE">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="JS数据类型JS常用的数据类型 string 字符串 number 数字 boolean 布尔 null 空 undefined *symbol 独一无二的值 object 对象（Date, Array, Object, Function…..）类型判断typeof获取数据类型1234567891011typeof &amp;quot;John&amp;quot;           // 返回 stringty">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS类型及类型转换">
+<meta property="og:url" content="http://yoursite.com/2019/07/29/JS类型及类型转换/index.html">
 <meta property="og:site_name" content="云族佳FE">
+<meta property="og:description" content="JS数据类型JS常用的数据类型 string 字符串 number 数字 boolean 布尔 null 空 undefined *symbol 独一无二的值 object 对象（Date, Array, Object, Function…..）类型判断typeof获取数据类型1234567891011typeof &amp;quot;John&amp;quot;           // 返回 stringty">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-07-29T03:21:29.067Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="云族佳FE">
+<meta name="twitter:title" content="JS类型及类型转换">
+<meta name="twitter:description" content="JS数据类型JS常用的数据类型 string 字符串 number 数字 boolean 布尔 null 空 undefined *symbol 独一无二的值 object 对象（Date, Array, Object, Function…..）类型判断typeof获取数据类型1234567891011typeof &amp;quot;John&amp;quot;           // 返回 stringty">
   
     <link rel="alternate" href="/ywk.blog.io/atom.xml" title="云族佳FE" type="application/atom+xml">
   
@@ -60,9 +64,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-JS类型及类型转换" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-JS类型及类型转换" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/ywk.blog.io/2019/07/29/JS类型及类型转换/" class="article-date">
   <time datetime="2019-07-29T03:21:07.000Z" itemprop="datePublished">2019-07-29</time>
@@ -75,8 +77,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/ywk.blog.io/2019/07/29/JS类型及类型转换/">JS类型及类型转换</a>
+    <h1 class="article-title" itemprop="name">
+      JS类型及类型转换
     </h1>
   
 
@@ -284,131 +286,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-React高阶组件" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/ywk.blog.io/2019/07/29/React高阶组件/" class="article-date">
-  <time datetime="2019-07-29T03:16:55.000Z" itemprop="datePublished">2019-07-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/ywk.blog.io/2019/07/29/React高阶组件/">React高阶组件</a>
-    </h1>
+    <a href="/ywk.blog.io/2019/07/29/React高阶组件/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">React高阶组件</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-高阶组件是什么？"><a href="#1-高阶组件是什么？" class="headerlink" title="1. 高阶组件是什么？"></a>1. 高阶组件是什么？</h2><p>高阶组件（ higher-order component ，HOC ）是 React 中复用组件逻辑的一种进阶技巧。它本身并不是 React 的 API，而是一种 React 组件的设计理念，</p>
-<p>可以类比高阶函数，高阶函数是把函数作为参数传入到函数中并返回一个新的函数。这里我们把函数替换为组件，就是高阶组件了</p>
-<p><code>const EnhancedComponent = higherOrderComponent(WrappedComponent);</code></p>
-<h2 id="2-高阶组件常见的实现方式"><a href="#2-高阶组件常见的实现方式" class="headerlink" title="2. 高阶组件常见的实现方式"></a>2. 高阶组件常见的实现方式</h2><h3 id="2-1-Props-Proxy-属性代理"><a href="#2-1-Props-Proxy-属性代理" class="headerlink" title="2.1 Props Proxy 属性代理"></a>2.1 Props Proxy 属性代理</h3><p>先了解下代理模式</p>
-<blockquote>
-<p>Proxy（代理模式）：为其他对象（消费者）提供一个代理（代理商）以控制对这个对象（生成商）的访问。</p>
-</blockquote>
-<p><img src="https://raw.githubusercontent.com/winfredwyw/notes/master/assets/201902/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F.jpg" alt="代理"></p>
-<blockquote>
-<p>代理模式优势: 重用业务逻辑</p>
-</blockquote>
-<p>Props Proxy实现</p>
-<blockquote>
-<p>请看具体代码</p>
-</blockquote>
-<p>注意点</p>
-<blockquote>
-<p>Props Proxy 作为一层代理，具有隔离的作用，因此传入 WrappedComponent 的 ref 将无法访问到其本身，需要在 Props Proxy 内完成中转，具体可参考以下代码，react-redux 也是这样实现的。</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">function ppHOC(WrappedComponent) &#123;</span><br><span class="line">  return class PP extends React.Component &#123;</span><br><span class="line">    // 实现 HOC 不同的命名</span><br><span class="line">    static displayName = `HOC($&#123;WrappedComponent.displayName&#125;)`;</span><br><span class="line"></span><br><span class="line">    getWrappedInstance() &#123;</span><br><span class="line">      return this.wrappedInstance;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 实现 ref 的访问</span><br><span class="line">    setWrappedInstance(ref) &#123;</span><br><span class="line">      this.wrappedInstance = ref;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    render() &#123;</span><br><span class="line">      return &lt;WrappedComponent &#123;</span><br><span class="line">        ...this.props,</span><br><span class="line">        ref: this.setWrappedInstance.bind(this),</span><br><span class="line">      &#125; /&gt;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@ppHOC</span><br><span class="line">class Example extends React.Component &#123;</span><br><span class="line">  static displayName = &apos;Example&apos;;</span><br><span class="line">  handleClick() &#123; ... &#125;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class App extends React.Component &#123;</span><br><span class="line">  handleClick() &#123;</span><br><span class="line">    this.refs.example.getWrappedInstance().handleClick();</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;button onClick=&#123;this.handleClick.bind(this)&#125;&gt;按钮&lt;/button&gt;</span><br><span class="line">        &lt;Example ref=&quot;example&quot; /&gt;</span><br><span class="line">      &lt;/div&gt;  </span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-2-提取state"><a href="#2-2-提取state" class="headerlink" title="2.2 提取state"></a>2.2 提取state</h3><p>请看代码</p>
-<h3 id="2-3-反向继承"><a href="#2-3-反向继承" class="headerlink" title="2.3 反向继承"></a>2.3 反向继承</h3><p>HOC 类继承了 WrappedComponent，意味着可以访问到 WrappedComponent 的 state、props、生命周期和 render 等方法。这种方案依然是继承的思想，对于 WrappedComponent 也有较强的侵入性，因此并不常见。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">function ppHOC(WrappedComponent) &#123;</span><br><span class="line">  return class ExampleEnhance extends WrappedComponent &#123;</span><br><span class="line">    ...</span><br><span class="line">    componentDidMount() &#123;</span><br><span class="line">      super.componentDidMount();</span><br><span class="line">    &#125;</span><br><span class="line">    componentWillUnmount() &#123;</span><br><span class="line">      super.componentWillUnmount();</span><br><span class="line">    &#125;</span><br><span class="line">    render() &#123;</span><br><span class="line">      ...</span><br><span class="line">      return super.render();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-HOC-的适用范围"><a href="#3-HOC-的适用范围" class="headerlink" title="3. HOC 的适用范围"></a>3. HOC 的适用范围</h2><ul>
-<li>与 DOM 相关，建议使用父组件，类似于原生 HTML 编写</li>
-<li>与 DOM 不相关，如校验、权限、请求发送、数据转换这类，通过数据变化间接控制 DOM，可以使用 HOC 抽象</li>
-<li>交叉的部分，DOM 相关，但可以做到完全内聚，即这些 DOM 不会和外部有关联，均可</li>
-</ul>
-<h2 id="4-参考地址"><a href="#4-参考地址" class="headerlink" title="4. 参考地址"></a>4. 参考地址</h2><ul>
-<li><a href="https://github.com/dt-fe/weekly/blob/v2/012.%E7%B2%BE%E8%AF%BB%20React%20%E9%AB%98%E9%98%B6%E7%BB%84%E4%BB%B6.md" target="_blank" rel="noopener">精读 React 高阶组件</a></li>
-<li><a href="https://github.com/dt-fe/weekly/issues/18" target="_blank" rel="noopener">讨论区</a></li>
-<li><a href="https://github.com/CyC2018/CS-Notes/blob/master/docs/notes/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.md" target="_blank" rel="noopener">设计模式</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/29/React高阶组件/" data-id="cjyntsubp0001gst8nzqm80sh" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-开始写作" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/ywk.blog.io/2019/07/29/开始写作/" class="article-date">
-  <time datetime="2019-07-29T01:57:29.712Z" itemprop="datePublished">2019-07-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/ywk.blog.io/2019/07/29/开始写作/">开始写作</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/29/开始写作/" data-id="cjyntsubj0000gst8qrs3ejo1" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
