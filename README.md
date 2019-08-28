@@ -9,3 +9,13 @@ npm i
 ```
 hexo new "My New Post"
 ```
+
+## 打包
+
+``` 
+hexo generate
+```
+
+## 发布
+
+项目 push 到远程即可
